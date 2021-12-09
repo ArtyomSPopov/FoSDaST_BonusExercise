@@ -1,14 +1,11 @@
-﻿from selenium import webdriver
+from selenium import webdriver
 from locators import locator
 from csv import reader
-import random
 from selenium.webdriver.support.ui import Select
+from webdriver_manager.chrome import ChromeDriverManager
 
-# from webdriver_manager.chrome import ChromeDriverManager
-# from webdriver_manager.Edge import EdgeDriverManager
-# driver = webdriver.Chrome(ChromeDriverManager().install())
-
-driver = webdriver.Edge(executable_path = '.\\msedgedriver.exe')
+# driver = webdriver.Edge(executable_path = '.\\msedgedriver.exe')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 
 driver.get("http://automationpractice.com/")
@@ -54,29 +51,3 @@ with open('data.csv') as csvfile:
         # Show message in command prompt
         print("\n\n-----/  Bonus Exercise for 2 points is Completed! Hurray!!!  /-----\n----->  ©️ Popov Artem (DIY053)\n")
 driver.quit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
